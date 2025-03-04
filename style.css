@@ -1,0 +1,244 @@
+/* Root Variables */
+:root {
+    --primary-color: #A28CD2;  /* Soft Lavender */
+    --secondary-color: #7FB3D5; /* Light Blue */
+    --text-color: #ffffff;
+    --background-color: linear-gradient(to right, #A28CD2, #7FB3D5);
+    --button-color: #F4A261; /* Soft Orange */
+    --button-hover: #E9C46A; /* Warm Yellow */
+    --transition: all 0.4s ease-in-out;
+}
+
+/* Reset & General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Background with Soft Gradient */
+body {
+    background: url('img/bg.png');  /* Update this path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Centering Welcome, Name, and Title */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Welcome Text */
+.welcome-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #E9C46A; /* Warm Yellow */
+    text-shadow: 0 0 10px rgba(233, 196, 106, 0.8), 0 0 20px rgba(233, 196, 106, 0.6);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Name Styling */
+.special-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FF6B6B; /* Soft Red */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #FF6B6B, 0 0 10px #FF8787; }
+    100% { text-shadow: 0 0 15px #FF6B6B, 0 0 20px #FF8787; }
+}
+
+/* Full Stack Developer Text */
+.full-stack-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #98C379; /* Soft Green */
+    text-shadow: 0 0 10px rgba(152, 195, 121, 0.8), 0 0 20px rgba(152, 195, 121, 0.6);
+    margin-top: 10px;
+}
+
+/* Highlight Section Titles */
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #A28CD2; /* Soft Purple */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    background: linear-gradient(45deg, #A28CD2, #7FB3D5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #A28CD2;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    margin-top: 20px;
+}
+
+/* Highlighted Sections */
+.education, .contact {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Center the entire project section */
+.projects {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Center the project section title */
+.projects h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #A28CD2;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* Style for each project */
+.project {
+    width: 60%;
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px solid #A28CD2;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    color: black;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+/* Center the project titles */
+.project h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #7FB3D5;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Center the project description */
+.project p {
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+}
+
+/* Resume Section */
+.resume-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.resume-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+    background: var(--button-color);
+    border-radius: 30px;
+    text-decoration: none;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(244, 162, 97, 0.4);
+}
+
+.resume-btn:hover {
+    background: var(--button-hover);
+    color: black;
+    box-shadow: 0 4px 15px rgba(233, 196, 106, 0.6);
+}
+
+/* Contact Links */
+.contact a {
+    color: var(--button-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+button, .github-btn {
+    padding: 12px 25px;
+    cursor: pointer;
+    border: none;
+    background: var(--button-color);
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: var(--transition);
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(244, 162, 97, 0.4);
+}
+
+button:hover, .github-btn:hover {
+    background: var(--button-hover);
+    color: black;
+    box-shadow: 0 4px 15px rgba(233, 196, 106, 0.6);
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        width: 100%;
+    }
+
+    .welcome-text {
+        font-size: 2rem;
+    }
+
+    .full-stack-text {
+        font-size: 1.5rem;
+    }
+}
